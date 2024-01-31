@@ -13,7 +13,7 @@ async function create(data: IQuestion) {
 }
 
 async function update(id: string, data: IQuestion) {
-  return Questions.findByIdAndUpdate(id, data);
+  return Questions.findByIdAndUpdate(id, data, { new: true });
 }
 
 async function remove(id: string) {
