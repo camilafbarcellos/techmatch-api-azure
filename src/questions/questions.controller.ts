@@ -60,7 +60,7 @@ async function remove(req: Request, res: Response) {
     if (!deletedQuestion) {
       res.status(404).json({ message: 'Question not found' });
     } else {
-      res.status(200).json(deletedQuestion);
+      res.status(204);
     }
   } catch (error) {
     console.error('Error removing question:', error);
