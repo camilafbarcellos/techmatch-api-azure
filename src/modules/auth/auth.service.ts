@@ -3,7 +3,7 @@ import dotenv from 'dotenv';
 
 dotenv.config();
 
-function authenticate(user: string, password: string): string {
+function authenticate(user: string, password: string): string | null {
   const { ADMIN_USER, ADMIN_PASSWORD, SECRET_KEY } = process.env;
 
   if (user === ADMIN_USER && password === ADMIN_PASSWORD) {
@@ -12,7 +12,7 @@ function authenticate(user: string, password: string): string {
     });
     return token;
   } else {
-    throw new Error('Wrong credentials');
+    return null;
   }
 }
 

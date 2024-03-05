@@ -5,7 +5,11 @@ function authenticate(req: Request, res: Response) {
     try {
         const { user, password } = req.body;
         const token = authService.authenticate(user, password);
-        res.json({ auth: true, jwt: token });
+        if (!token) {
+            res.status(401).json({ message: 'Wrong credentials' });
+        } else {
+            res.status(200).json({ accessToken: token });
+        }
     } catch (error) {
         console.error('Error trying to authenticate:', error);
         res.status(500).send('Internal Server Error');
