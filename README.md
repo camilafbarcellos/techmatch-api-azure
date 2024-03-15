@@ -10,7 +10,7 @@
 **API** developed for the webapp **TechMatch**, with a database that relays on the **MongoDB Atlas** cloud.
 > :rocket: Available online on [Render](https://techmatch-api.onrender.com)!
 
-The **front-end** of the application can be found at its [GitHub repository](https://github.com/camilafbarcellos/techmatch-api).
+The **front-end** of the application can be found at its [GitHub repository](https://github.com/camilafbarcellos/techmatch).
 > :rocket: Available online on [Vercel](https://techmatch.vercel.app/)!
 
 
@@ -57,7 +57,7 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 | `category`     | String    |   true   |
 
 <p align="center">
-    <img src="./src/assets/images/database.png" width=80%>
+    <img src="./src/assets/images/database.png" width=50%>
 </p>
 
 
@@ -66,4 +66,6 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 |--
 | <a href="https://github.com/camilafbarcellos">Camila Barcellos</a>
 
-[↑ Back to top](#seedling-techmatch-api)
+<p align="right">
+    <a href="#seedling-techmatch-api">↑ Back to top</a>
+</p>
