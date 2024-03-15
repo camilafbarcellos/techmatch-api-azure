@@ -17,9 +17,9 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 ## :heavy_check_mark: Features
 - [Express](https://expressjs.com/) API with complete CRUD routes to [Questions](#questions-endpoints), including token authentication for adding, updating and deleting a question;
     - Uses [JSON Web Token (JWT)](https://jwt.io/) to authenticate and authorize tokens that lasts 1h.
-- Cloud [MongoDB Atlas](https://www.mongodb.com/atlas/database) database with [Questions](#question-entity) collection;
+- Cloud [MongoDB Atlas](https://www.mongodb.com/atlas/database) database with [Questions](#questions-entity) collection;
 - Complete [Postman](https://www.postman.com/) collection containing all the REST API tests and a full detailed description.
-    - You can download the JSON file of the [Postman collection](/github/sys-compass_API.postman_collection.json) and import it directly to your Postman to check the full API description and request examples;
+    - You can download the JSON file of the [Postman collection](./src/tests/postman/techmatch-API.postman_collection.json) and import it directly to your Postman to check the full API description and request examples;
     - At Postman, follow ``Import > Select file`` to correctly import the collection and use it.
 
 ## :gear: Technologies
@@ -67,5 +67,5 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 | <a href="https://github.com/camilafbarcellos">Camila Barcellos</a>
 
 <p align="right">
-    <a href="#seedling-techmatch-api">↑ Back to top</a>
+    <a href="#seedling-techmatch--api">↑ Back to top</a>
 </p>
