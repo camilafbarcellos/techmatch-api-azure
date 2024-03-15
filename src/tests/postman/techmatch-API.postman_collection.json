@@ -1,0 +1,896 @@
+{
+	"info": {
+		"_postman_id": "6222c733-b697-40e0-8d9a-5fc86dfe78c7",
+		"name": "techmatch-API",
+		"description": "<img src=\"https://content.pstmn.io/5d7133eb-3ab5-4623-b32b-186598ab3ca4/bG9nby5wbmc=\" width=\"100\" height=\"96\">\n\nExpressJS API developed for the webapp **TechMatch**, with a database that relays on the **MongoDB Atlas** cloud.\n\nAvailable online at [<b>https://techmatch-api.onrender.com</b>](https://techmatch-api.onrender.com) on **Render**!\n\nThe full project can be found at the following [<b>GitHub repository</b>](https://github.com/camilafbarcellos/techmatch-api).\n\nThe front-end of the application is available at [<b>https://techmatch.vercel.app/</b>](https://techmatch.vercel.app/) on **Vercel** and at its [<b>GitHub repository</b>](https://github.com/camilafbarcellos/techmatch).\n\n> **Developed by Camila Barcellos - 2024**",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "27610932"
+	},
+	"item": [
+		{
+			"name": "/questions",
+			"item": [
+				{
+					"name": "GET questions",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{RENDER_URL}}/questions",
+							"host": [
+								"{{RENDER_URL}}"
+							],
+							"path": [
+								"questions"
+							]
+						},
+						"description": "List **all questions**.\n\n- In case of success, returns **200** with the questions"
+					},
+					"response": [
+						{
+							"name": "GET questions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "https://techmatch-api.onrender.com/questions",
+									"protocol": "https",
+									"host": [
+										"techmatch-api",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"questions"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 15 Mar 2024 17:29:38 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "864e394d6cc2a4aa-GRU"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"dfd-hxC22hdykBFhNbRZ7GhNsSHB9cQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "22f83d3f-7011-4227"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"_id\": \"65b94166240e37879d2d5450\",\n        \"category\": \"Desenvolvimento\",\n        \"question\": \"Eu tenho curiosidade em descobrir como os aplicativos, sites e jogos que utilizo são criados.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d5451\",\n        \"category\": \"Desenvolvimento\",\n        \"question\": \"A ideia de dar vida às minhas próprias ideias por meio da programação me empolga, e fico intrigado com o poder dos códigos em criar experiências digitais complexas.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d5452\",\n        \"category\": \"Desenvolvimento\",\n        \"question\": \"Explorar diferentes linguagens e tecnologias de programação soa como uma aventura empolgante que eu adoraria embarcar.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d5453\",\n        \"category\": \"Infraestrutura de TI\",\n        \"question\": \"Eu sinto curiosidade sobre como a Internet funciona e como os dispositivos e os componentes eletrônicos se comunicam entre si.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d5454\",\n        \"category\": \"Infraestrutura de TI\",\n        \"question\": \"Manter os meus dados organizados de forma otimizada, como a minha coleção de músicas e os arquivos do meu computador, é um costume valioso para mim.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d5455\",\n        \"category\": \"Infraestrutura de TI\",\n        \"question\": \"Eu me sinto à vontade experimentando diferentes configurações de rede, testando soluções de armazenamento em nuvem por conta própria e até mesmo consertando os meus próprios equipamentos eletrônicos.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d5456\",\n        \"category\": \"Cibersegurança\",\n        \"question\": \"Tenho interesse em conhecer e aprender sobre ameaças digitais e como combatê-las, e costumo estar por dentro de notícias sobre ataques e vazamentos de dados.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d5457\",\n        \"category\": \"Cibersegurança\",\n        \"question\": \"Navegar na internet com cautela é um hábito para mim, pois sei que existem diversas ameaças à espreita.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d5458\",\n        \"category\": \"Cibersegurança\",\n        \"question\": \"Proteger os meus dados e a minha privacidade é uma prioridade, e costumo avaliar a confiabilidade das empresas e dos aplicativos que utilizo.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d5459\",\n        \"category\": \"Ciência de Dados\",\n        \"question\": \"Tenho o costume de analisar detalhadamente as minhas decisões, em busca de padrões que me ajudem a tomar decisões melhores com a ajuda da tecnologia.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d545a\",\n        \"category\": \"Ciência de Dados\",\n        \"question\": \"A ideia de máquinas que aprendem e aprimoram as suas habilidades por conta própria não me assusta, pois considero fascinante a capacidade de desvendar mistérios e realizar tarefas que antes pareciam impossíveis para os humanos.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d545b\",\n        \"category\": \"Ciência de Dados\",\n        \"question\": \"Adoro testar assistentes virtuais, como Siri e Alexa, para tornar a minha vida mais fácil e os meus dispositivos mais inteligentes no dia a dia.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d545c\",\n        \"category\": \"Desafios\",\n        \"question\": \"Estou ciente da competitividade e da dificuldade em ingressar mercado de trabalho de TI, especialmente devido à exigência de conhecimentos práticos e consistentes em matemática e lógica.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d545d\",\n        \"category\": \"Desafios\",\n        \"question\": \"Sou dedicado e persistente, então a complexidade de estudar lógica e matemática avançada é um desafio que estou disposto a enfrentar para ingressar na área de TI.\"\n    },\n    {\n        \"_id\": \"65b94166240e37879d2d545e\",\n        \"category\": \"Desafios\",\n        \"question\": \"Eu entendo a importância do aprendizado contínuo para me manter atualizado sobre as tecnologias modernas, especialmente devido às constantes mudanças que exigem que eu reaprenda ou adquira novas habilidades a cada curto período de tempo.\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "GET question by ID",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"url": {
+							"raw": "{{RENDER_URL}}/questions/65b94166240e37879d2d5452",
+							"host": [
+								"{{RENDER_URL}}"
+							],
+							"path": [
+								"questions",
+								"65b94166240e37879d2d5452"
+							]
+						},
+						"description": "Retrieve information about a **specific question**.\n\n- In case of success, returns **200** with the question\n    \n- If the ID is not found, returns **404**"
+					},
+					"response": [
+						{
+							"name": "GET question by ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"url": {
+									"raw": "https://techmatch-api.onrender.com/questions/65b94166240e37879d2d5452",
+									"protocol": "https",
+									"host": [
+										"techmatch-api",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"questions",
+										"65b94166240e37879d2d5452"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 19:59:17 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "85fcaf85f85aa59d-GRU"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c5-sGbdPJsy2R5OEtcM+iLHKaLhQ74\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "68933fde-f026-4856"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"65b94166240e37879d2d5452\",\n    \"category\": \"Desenvolvimento\",\n    \"question\": \"Explorar diferentes linguagens e tecnologias de programação soa como uma aventura empolgante que eu adoraria embarcar.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "ADD question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDk2Njg2MjgsImV4cCI6MTcwOTY3MjIyOH0.8yLA9yOkfhDfV0kx7ilm7FtgRu14ZCwgh-ReLqga9fQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"category\": \"Categoria\",\n\t\"question\": \"Enunciado\"\n}"
+						},
+						"url": {
+							"raw": "{{RENDER_URL}}/questions",
+							"host": [
+								"{{RENDER_URL}}"
+							],
+							"path": [
+								"questions"
+							]
+						},
+						"description": "Register a **new question**.\n\n- Requires a valid JWT token in header\n- In case of success, returns **201** with the question registered\n    \n- If the request has any invalid fields, returns **400** informing the error"
+					},
+					"response": [
+						{
+							"name": "ADD question",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"category\": \"Categoria\",\n\t\"question\": \"Enunciado\"\n}"
+								},
+								"url": {
+									"raw": "https://techmatch-api.onrender.com/questions",
+									"protocol": "https",
+									"host": [
+										"techmatch-api",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"questions"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 19:58:32 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "85fcae677d1ea59d-GRU"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"50-FsYSXqt+Emxidz/mudxZnRSb93o\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "28ff9368-9f51-47f1"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"category\": \"Categoria\",\n    \"question\": \"Enunciado\",\n    \"_id\": \"65e7796758c7377fb09673c4\"\n}"
+						}
+					]
+				},
+				{
+					"name": "UPDATE question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDk2Njg2MjgsImV4cCI6MTcwOTY3MjIyOH0.8yLA9yOkfhDfV0kx7ilm7FtgRu14ZCwgh-ReLqga9fQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"question\": \"Enunciado alterado\"\n}"
+						},
+						"url": {
+							"raw": "{{RENDER_URL}}/questions/65e7796758c7377fb09673c4",
+							"host": [
+								"{{RENDER_URL}}"
+							],
+							"path": [
+								"questions",
+								"65e7796758c7377fb09673c4"
+							]
+						},
+						"description": "**Update** information of a **specific question**.\n\n- Requires a valid JWT token in header\n- In case of success, returns **200** with the question\n    \n- If the ID is not found, returns **404**"
+					},
+					"response": [
+						{
+							"name": "UPDATE question",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"question\": \"Enunciado alterado\"\n}"
+								},
+								"url": {
+									"raw": "https://techmatch-api.onrender.com/questions/65e7796758c7377fb09673c4",
+									"protocol": "https",
+									"host": [
+										"techmatch-api",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"questions",
+										"65e7796758c7377fb09673c4"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 19:59:43 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "85fcb027edaba59d-GRU"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"59-FAP52sNKPMz0XZepfE9QUaW3iRM\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "2c3817fe-30bb-463f"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"65e7796758c7377fb09673c4\",\n    \"category\": \"Categoria\",\n    \"question\": \"Enunciado alterado\"\n}"
+						}
+					]
+				},
+				{
+					"name": "DELETE question",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDk2Njg2MjgsImV4cCI6MTcwOTY3MjIyOH0.8yLA9yOkfhDfV0kx7ilm7FtgRu14ZCwgh-ReLqga9fQ",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "*/*"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{RENDER_URL}}/questions/65e7796758c7377fb09673c4",
+							"host": [
+								"{{RENDER_URL}}"
+							],
+							"path": [
+								"questions",
+								"65e7796758c7377fb09673c4"
+							]
+						},
+						"description": "**Remove** a **specific question**.\n\n- Requires a valid JWT token in header\n- In case of success, returns **204** with empty body\n    \n- If the ID is not found, returns **404**"
+					},
+					"response": [
+						{
+							"name": "DELETE question",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"url": {
+									"raw": "https://techmatch-api.onrender.com/questions/65e7796758c7377fb09673c4",
+									"protocol": "https",
+									"host": [
+										"techmatch-api",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"questions",
+										"65e7796758c7377fb09673c4"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 20:00:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "85fcb101681aa59d-GRU"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "rndr-id",
+									"value": "abcb2776-4349-416b"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			],
+			"description": "This route allows performing operations related to the **questions** MongoDB collection."
+		},
+		{
+			"name": "/auth",
+			"item": [
+				{
+					"name": "POST auth",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"user\": \"admin\",\n\t\"password\": \"admin@techmatch\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{RENDER_URL}}/auth",
+							"host": [
+								"{{RENDER_URL}}"
+							],
+							"path": [
+								"auth"
+							]
+						},
+						"description": "**Gets a 1h valid JWT token.**\n\n- In case of success, returns **200** with a valid token\n    \n- If the credentials are invalid, returns **401**"
+					},
+					"response": [
+						{
+							"name": "POST auth 200",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"user\": \"admin\",\n\t\"password\": \"admin@techmatch\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "https://techmatch-api.onrender.com/auth",
+									"protocol": "https",
+									"host": [
+										"techmatch-api",
+										"onrender",
+										"com"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 20:26:23 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "85fcd73a5b98a4b6-GRU"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ba-GxJbWtelaA+e8M56bpB5uOs5DuM\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "cf37f071-9d6e-4d48"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDk2NzAzODMsImV4cCI6MTcwOTY3Mzk4M30.sloSgHla_z4r1f6yX0QPCgF0eaFvdaLEQY9XTfgYiog\"\n}"
+						},
+						{
+							"name": "POST auth 401",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"user\": \"admin\",\n\t\"password\": \"admintechmatch\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{RENDER_URL}}/auth",
+									"host": [
+										"{{RENDER_URL}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 05 Mar 2024 20:26:47 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "85fcd7cd4fdda4b6-GRU"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-DEKBDWhnMxj3hT0dVyPsdI9Tdw8\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "56e7e6ce-5bde-4e4b"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Wrong credentials\"\n}"
+						}
+					]
+				}
+			],
+			"description": "This route performs operations related to authenticating and requesting a JWT token that allows safe operations at the /questions route."
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "RENDER_URL",
+			"value": "https://techmatch-api.onrender.com"
+		},
+		{
+			"key": "LOCAL_URL",
+			"value": "http://localhost:4000",
+			"type": "string"
+		}
+	]
+}
