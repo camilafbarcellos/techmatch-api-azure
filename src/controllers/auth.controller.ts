@@ -1,5 +1,5 @@
 import { Request, Response } from 'express';
-import * as authService from './auth.service';
+import * as authService from '../services/auth.service';
 
 function authenticate(req: Request, res: Response) {
     try {

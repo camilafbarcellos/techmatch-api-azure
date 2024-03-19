@@ -1,5 +1,5 @@
 import NodeCache from 'node-cache';
-import Questions, { IQuestion } from './question.model';
+import Questions, { IQuestion } from '../models/question.model';
 
 // Cache instance
 const cache = new NodeCache();
