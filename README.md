@@ -13,13 +13,17 @@
 The **front-end** of the application can be found at its [GitHub repository](https://github.com/camilafbarcellos/techmatch).
 > :rocket: Available online on [Vercel](https://techmatch.vercel.app/)!
 
+<p align="center">
+    <img src="./src/assets/images/architecture.png" width=80%>
+</p>
+
 
 ## :heavy_check_mark: Features
 - [Express](https://expressjs.com/) API with complete CRUD routes to [Questions](#questions-endpoints), including token authentication for adding, updating and deleting a question;
     - Uses [JSON Web Token (JWT)](https://jwt.io/) to authenticate and authorize tokens that lasts 1h.
 - Cloud [MongoDB Atlas](https://www.mongodb.com/atlas/database) database with [Questions](#questions-entity) collection;
 - Complete [Postman](https://www.postman.com/) collection containing all the REST API tests and a full detailed description.
-    - You can download the JSON file of the [Postman collection](./src/tests/postman/techmatch-API.postman_collection.json) and import it directly to your Postman to check the full API description and request examples;
+    - You can download the JSON file of the [Postman collection](./tests//postman/techmatch-API.postman_collection.json) and import it directly to your Postman to check the full API description and request examples;
     - At Postman, follow ``Import > Select file`` to correctly import the collection and use it.
 
 ## :gear: Technologies
@@ -53,8 +57,8 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 |    FieldName   |    Type   | Required |
 |----------------|:---------:|:--------:|
 | `_id`          | ObjectId  |   true   |
-| `question`     | String    |   true   |
 | `category`     | String    |   true   |
+| `question`     | String    |   true   |
 
 <p align="center">
     <img src="./src/assets/images/database.png" width=50%>
