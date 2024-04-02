@@ -7,6 +7,7 @@ export const authMiddleware = (req: Request, res: Response, next: NextFunction):
 
     if (!token) {
         res.status(403).send({ message: 'Token is missing' });
+        return;
     }
 
     jwt.verify(token, SECRET_KEY, (err) => {
