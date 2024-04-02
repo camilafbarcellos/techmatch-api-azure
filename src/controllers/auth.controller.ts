@@ -3,8 +3,8 @@ import * as authService from '../services/auth.service';
 
 function authenticate(req: Request, res: Response) {
     try {
-        const { user, password } = req.body;
-        const token = authService.authenticate(user, password);
+        const adminUser = req.body;
+        const token = authService.authenticate(adminUser);
         if (!token) {
             res.status(401).json({ message: 'Wrong credentials' });
         } else {

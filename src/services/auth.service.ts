@@ -1,13 +1,14 @@
 import jwt, { Secret } from 'jsonwebtoken';
 import dotenv from 'dotenv';
+import IAdminUser from '../models/adminUser.model';
 
 dotenv.config();
 
-function authenticate(user: string, password: string): string | null {
+function authenticate(data: IAdminUser): string | null {
   const { ADMIN_USER, ADMIN_PASSWORD, SECRET_KEY } = process.env;
 
-  if (user === ADMIN_USER && password === ADMIN_PASSWORD) {
-    const token = jwt.sign({ user, role: 'admin' }, SECRET_KEY as Secret, {
+  if (data.user === ADMIN_USER && data.password === ADMIN_PASSWORD) {
+    const token = jwt.sign({ user: data.user, role: 'admin' }, SECRET_KEY as Secret, {
       expiresIn: '1h'
     });
     return token;
