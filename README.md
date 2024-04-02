@@ -7,7 +7,7 @@
   <img src="./src/assets/images/logo.png" width=115 />
 </p>
 
-**API** developed for the webapp **TechMatch**, with a database that relays on the **MongoDB Atlas** cloud.
+**API** developed for the webapp **TechMatch**, with a database that relays on the **MongoDB Atlas** cloud. [Swagger documentation](https://techmatch-api.onrender.com/docs/) available online.
 > :rocket: Available online on [Render](https://techmatch-api.onrender.com)!
 
 The **front-end** of the application can be found at its [GitHub repository](https://github.com/camilafbarcellos/techmatch).
@@ -33,6 +33,8 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
 ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
+![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)
+![Jest](https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white)
 
 ## :door: Endpoints
 
@@ -51,6 +53,11 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 |   ---------------   | :----------: |  ----------------------------------------------  |                                                                           
 |  `/auth`     |    POST      |  Authenticates the admin credentials and generates an JWT token that allows creating, updating and deleting questions      | 
 
+### Documentation Endpoints
+|       Route         |    Method    |                   Description                    |                                                                         
+|   ---------------   | :----------: |  ----------------------------------------------  |                                                                           
+|  `/docs`     |    GET      |  Opens the API Swagger documentation      | 
+
 ## :bricks: Schemas
 
 ### Questions Entity
@@ -59,6 +66,12 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 | `_id`          | ObjectId  |   true   |
 | `category`     | String    |   true   |
 | `question`     | String    |   true   |
+
+### User Admin Entity
+|    FieldName   |    Type   | Required |
+|----------------|:---------:|:--------:|
+| `user`         | String    |   true   |
+| `password`     | String    |   true   |
 
 <p align="center">
     <img src="./src/assets/images/database.png" width=50%>
