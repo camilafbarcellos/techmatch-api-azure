@@ -22,9 +22,11 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 - [Express](https://expressjs.com/) API with complete CRUD routes to [Questions](#questions-endpoints), including token authentication for adding, updating and deleting a question;
     - Uses [JSON Web Token (JWT)](https://jwt.io/) to authenticate and authorize tokens that lasts 1h.
 - Cloud [MongoDB Atlas](https://www.mongodb.com/atlas/database) database with [Questions](#questions-entity) collection;
-- Complete [Postman](https://www.postman.com/) collection containing all the REST API tests and a full detailed description.
+- Full [Swagger](https://swagger.io/) documentation following the OpenAPI Specification;
+- Complete [Postman](https://www.postman.com/) collection containing all the REST API tests and a full detailed description;
     - You can download the JSON file of the [Postman collection](./tests//postman/techmatch-API.postman_collection.json) and import it directly to your Postman to check the full API description and request examples;
     - At Postman, follow ``Import > Select file`` to correctly import the collection and use it.
+- End-to-end tests for the API endpoints built with [Jest](https://jestjs.io/) and [Supertest](https://www.npmjs.com/package/supertest).
 
 ## :gear: Technologies
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
@@ -32,8 +34,8 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 ![Express](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-black?style=for-the-badge&logo=JSON%20web%20tokens)
-![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Swagger](https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=Swagger&logoColor=white)
+![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white)
 ![Jest](https://img.shields.io/badge/Jest-323330?style=for-the-badge&logo=Jest&logoColor=white)
 
 ## :door: Endpoints
@@ -56,7 +58,7 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 ### Documentation Endpoints
 |       Route         |    Method    |                   Description                    |                                                                         
 |   ---------------   | :----------: |  ----------------------------------------------  |                                                                           
-|  `/docs`     |    GET      |  Opens the API Swagger documentation      | 
+|  `/docs`     |    GET      |  Swagger API documentation      | 
 
 ## :bricks: Schemas
 
@@ -67,16 +69,17 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 | `category`     | String    |   true   |
 | `question`     | String    |   true   |
 
+<p align="center">
+    <img src="./src/assets/images/database.png" width=50%>
+</p>
+
 ### User Admin Entity
 |    FieldName   |    Type   | Required |
 |----------------|:---------:|:--------:|
 | `user`         | String    |   true   |
 | `password`     | String    |   true   |
 
-<p align="center">
-    <img src="./src/assets/images/database.png" width=50%>
-</p>
-
+> The user admin model is solely used for authenticating the API admin with a JWT token and doesn't represent a database collection.
 
 ## :star2: Author
 | <img src="https://avatars.githubusercontent.com/camilafbarcellos" width=115>
