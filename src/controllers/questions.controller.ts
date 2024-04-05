@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 import * as questionsService from '../services/questions.service';
 import { CreateQuestionDTO } from '../dtos/questions/createQuestion.dto';
 import { UpdateQuestionDTO } from '../dtos/questions/updateQuestion.dto';
-import { isValidCategory } from '../utils/isValidCategory';
+import isValidCategory from '../utils/isValidCategory';
 
 async function getAll(req: Request, res: Response) {
   try {
