@@ -1,21 +1,21 @@
-import { ObjectId } from 'mongodb';
-import mongoose from 'mongoose';
+import { Document, Schema, model } from 'mongoose';
+import { QuestionCategory } from '../utils/questionCategory';
 
 export interface IQuestion extends Document {
-  id: ObjectId,
-  category: string,
-  question: string
+  category: string;
+  question: string;
 }
 
-const QuestionSchema = new mongoose.Schema({
+const QuestionSchema = new Schema<IQuestion>({
   category: {
     type: String,
-    required: true,
+    enum: Object.values(QuestionCategory),
+    required: true
   },
   question: {
     type: String,
-    required: true,
-  },
+    required: true
+  }
 }, { versionKey: false });
 
-export default mongoose.model<IQuestion>('Questions', QuestionSchema);
+export default model<IQuestion>('Questions', QuestionSchema);
