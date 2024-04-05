@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "6222c733-b697-40e0-8d9a-5fc86dfe78c7",
+		"_postman_id": "9555b933-3e12-4244-bd68-9fb64ae36123",
 		"name": "techmatch-API",
 		"description": "<img src=\"https://content.pstmn.io/5d7133eb-3ab5-4623-b32b-186598ab3ca4/bG9nby5wbmc=\" width=\"100\" height=\"96\">\n\nExpressJS API developed for the webapp **TechMatch**, with a database that relays on the **MongoDB Atlas** cloud.\n\nAvailable online at [<b>https://techmatch-api.onrender.com</b>](https://techmatch-api.onrender.com) on **Render**!\n\nThe full project can be found at the following [<b>GitHub repository</b>](https://github.com/camilafbarcellos/techmatch-api).\n\nThe front-end of the application is available at [<b>https://techmatch.vercel.app/</b>](https://techmatch.vercel.app/) on **Vercel** and at its [<b>GitHub repository</b>](https://github.com/camilafbarcellos/techmatch).\n\n> **Developed by Camila Barcellos - 2024**",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
@@ -250,7 +250,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDk2Njg2MjgsImV4cCI6MTcwOTY3MjIyOH0.8yLA9yOkfhDfV0kx7ilm7FtgRu14ZCwgh-ReLqga9fQ",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTIyODAxNDMsImV4cCI6MTcxMjI4Mzc0M30.ImPN-IcaBhuW5lGSqpLm9UVBYnH-eZUUO09f5Yr4pXg",
 									"type": "string"
 								}
 							]
@@ -268,7 +268,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"category\": \"Categoria\",\n\t\"question\": \"Enunciado\"\n}"
+							"raw": "{\n\t\"category\": \"Desenvolvimento\",\n\t\"question\": \"Enunciado\"\n}"
 						},
 						"url": {
 							"raw": "{{RENDER_URL}}/questions",
@@ -283,7 +283,7 @@
 					},
 					"response": [
 						{
-							"name": "ADD question",
+							"name": "ADD question - valid",
 							"originalRequest": {
 								"method": "POST",
 								"header": [
@@ -298,7 +298,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"category\": \"Categoria\",\n\t\"question\": \"Enunciado\"\n}"
+									"raw": "{\n\t\"category\": \"Desenvolvimento\",\n\t\"question\": \"Enunciado\"\n}"
 								},
 								"url": {
 									"raw": "https://techmatch-api.onrender.com/questions",
@@ -319,7 +319,7 @@
 							"header": [
 								{
 									"key": "Date",
-									"value": "Tue, 05 Mar 2024 19:58:32 GMT"
+									"value": "Fri, 05 Apr 2024 01:23:02 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -335,7 +335,7 @@
 								},
 								{
 									"key": "CF-Ray",
-									"value": "85fcae677d1ea59d-GRU"
+									"value": "86f5bafe2ea0017c-GRU"
 								},
 								{
 									"key": "CF-Cache-Status",
@@ -347,7 +347,7 @@
 								},
 								{
 									"key": "ETag",
-									"value": "W/\"50-FsYSXqt+Emxidz/mudxZnRSb93o\""
+									"value": "W/\"56-/nGyBaSSMS7U8Ddfao3a4jSEhBk\""
 								},
 								{
 									"key": "Vary",
@@ -355,7 +355,7 @@
 								},
 								{
 									"key": "rndr-id",
-									"value": "28ff9368-9f51-47f1"
+									"value": "daf87173-ad8f-4da4"
 								},
 								{
 									"key": "x-powered-by",
@@ -375,7 +375,99 @@
 								}
 							],
 							"cookie": [],
-							"body": "{\n    \"category\": \"Categoria\",\n    \"question\": \"Enunciado\",\n    \"_id\": \"65e7796758c7377fb09673c4\"\n}"
+							"body": "{\n    \"category\": \"Desenvolvimento\",\n    \"question\": \"Enunciado\",\n    \"_id\": \"660f527525b7250390100d9a\"\n}"
+						},
+						{
+							"name": "ADD question - invalid",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"category\": \"Categoria\",\n\t\"question\": \"Enunciado\"\n}"
+								},
+								"url": {
+									"raw": "{{RENDER_URL}}/questions",
+									"host": [
+										"{{RENDER_URL}}"
+									],
+									"path": [
+										"questions"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 05 Apr 2024 01:23:37 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "86f5bbde0b77017c-GRU"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-BKcods77CPSLMRWswZgYkMZK2jU\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "eca8cd71-4791-45c4"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid category\"\n}"
 						}
 					]
 				},
@@ -387,7 +479,7 @@
 							"bearer": [
 								{
 									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDk2Njg2MjgsImV4cCI6MTcwOTY3MjIyOH0.8yLA9yOkfhDfV0kx7ilm7FtgRu14ZCwgh-ReLqga9fQ",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MTIyODAxNDMsImV4cCI6MTcxMjI4Mzc0M30.ImPN-IcaBhuW5lGSqpLm9UVBYnH-eZUUO09f5Yr4pXg",
 									"type": "string"
 								}
 							]
@@ -405,23 +497,23 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n\t\"question\": \"Enunciado alterado\"\n}"
+							"raw": "{\n\t\"category\": \"Desafios\"\n}"
 						},
 						"url": {
-							"raw": "{{RENDER_URL}}/questions/65e7796758c7377fb09673c4",
+							"raw": "{{RENDER_URL}}/questions/660f527525b7250390100d9a",
 							"host": [
 								"{{RENDER_URL}}"
 							],
 							"path": [
 								"questions",
-								"65e7796758c7377fb09673c4"
+								"660f527525b7250390100d9a"
 							]
 						},
 						"description": "**Update** information of a **specific question**.\n\n- Requires a valid JWT token in header\n- In case of success, returns **200** with the question\n    \n- If the ID is not found, returns **404**"
 					},
 					"response": [
 						{
-							"name": "UPDATE question",
+							"name": "UPDATE question - statement",
 							"originalRequest": {
 								"method": "PUT",
 								"header": [
@@ -519,6 +611,196 @@
 							],
 							"cookie": [],
 							"body": "{\n    \"_id\": \"65e7796758c7377fb09673c4\",\n    \"category\": \"Categoria\",\n    \"question\": \"Enunciado alterado\"\n}"
+						},
+						{
+							"name": "UPDATE question - invalid category",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"category\": \"Categoria inválida\"\n}"
+								},
+								"url": {
+									"raw": "{{RENDER_URL}}/questions/65e7796758c7377fb09673c4",
+									"host": [
+										"{{RENDER_URL}}"
+									],
+									"path": [
+										"questions",
+										"65e7796758c7377fb09673c4"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 05 Apr 2024 01:24:56 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "86f5bdcdcf73017c-GRU"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-BKcods77CPSLMRWswZgYkMZK2jU\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "84963d9c-98f0-4dfb"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid category\"\n}"
+						},
+						{
+							"name": "UPDATE question - valid category",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									},
+									{
+										"key": "Accept",
+										"value": "*/*"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"category\": \"Desafios\"\n}"
+								},
+								"url": {
+									"raw": "{{RENDER_URL}}/questions/660f527525b7250390100d9a",
+									"host": [
+										"{{RENDER_URL}}"
+									],
+									"path": [
+										"questions",
+										"660f527525b7250390100d9a"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 05 Apr 2024 01:25:46 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "CF-Ray",
+									"value": "86f5bf01c904017c-GRU"
+								},
+								{
+									"key": "CF-Cache-Status",
+									"value": "DYNAMIC"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4f-TGrRF+oYlfs4IVlm+FZPzP0xYXo\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "rndr-id",
+									"value": "a6406014-0451-4664"
+								},
+								{
+									"key": "x-powered-by",
+									"value": "Express"
+								},
+								{
+									"key": "x-render-origin-server",
+									"value": "Render"
+								},
+								{
+									"key": "Server",
+									"value": "cloudflare"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "br"
+								},
+								{
+									"key": "alt-svc",
+									"value": "h3=\":443\"; ma=86400"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"_id\": \"660f527525b7250390100d9a\",\n    \"category\": \"Desafios\",\n    \"question\": \"Enunciado\"\n}"
 						}
 					]
 				},
@@ -637,7 +919,7 @@
 								}
 							],
 							"cookie": [],
-							"body": null
+							"body": ""
 						}
 					]
 				}
@@ -674,13 +956,13 @@
 					},
 					"response": [
 						{
-							"name": "POST auth 200",
+							"name": "POST auth",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n\t\"user\": \"admin\",\n\t\"password\": \"admin@techmatch\"\n}",
+									"raw": "{\n\t\"user\": \"admin\",\n\t\"password\": \"password\"\n}",
 									"options": {
 										"raw": {
 											"language": "json"
@@ -700,105 +982,13 @@
 									]
 								}
 							},
-							"status": "OK",
-							"code": 200,
-							"_postman_previewlanguage": "json",
-							"header": [
-								{
-									"key": "Date",
-									"value": "Tue, 05 Mar 2024 20:26:23 GMT"
-								},
-								{
-									"key": "Content-Type",
-									"value": "application/json; charset=utf-8"
-								},
-								{
-									"key": "Transfer-Encoding",
-									"value": "chunked"
-								},
-								{
-									"key": "Connection",
-									"value": "keep-alive"
-								},
-								{
-									"key": "CF-Ray",
-									"value": "85fcd73a5b98a4b6-GRU"
-								},
-								{
-									"key": "CF-Cache-Status",
-									"value": "DYNAMIC"
-								},
-								{
-									"key": "Access-Control-Allow-Origin",
-									"value": "*"
-								},
-								{
-									"key": "ETag",
-									"value": "W/\"ba-GxJbWtelaA+e8M56bpB5uOs5DuM\""
-								},
-								{
-									"key": "Vary",
-									"value": "Accept-Encoding"
-								},
-								{
-									"key": "rndr-id",
-									"value": "cf37f071-9d6e-4d48"
-								},
-								{
-									"key": "x-powered-by",
-									"value": "Express"
-								},
-								{
-									"key": "x-render-origin-server",
-									"value": "Render"
-								},
-								{
-									"key": "Server",
-									"value": "cloudflare"
-								},
-								{
-									"key": "Content-Encoding",
-									"value": "br"
-								},
-								{
-									"key": "alt-svc",
-									"value": "h3=\":443\"; ma=86400"
-								}
-							],
-							"cookie": [],
-							"body": "{\n    \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiYWRtaW4iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE3MDk2NzAzODMsImV4cCI6MTcwOTY3Mzk4M30.sloSgHla_z4r1f6yX0QPCgF0eaFvdaLEQY9XTfgYiog\"\n}"
-						},
-						{
-							"name": "POST auth 401",
-							"originalRequest": {
-								"method": "POST",
-								"header": [],
-								"body": {
-									"mode": "raw",
-									"raw": "{\n\t\"user\": \"admin\",\n\t\"password\": \"admintechmatch\"\n}",
-									"options": {
-										"raw": {
-											"language": "json"
-										}
-									}
-								},
-								"url": {
-									"raw": "{{RENDER_URL}}/auth",
-									"host": [
-										"{{RENDER_URL}}"
-									],
-									"path": [
-										"auth"
-									]
-								}
-							},
 							"status": "Unauthorized",
 							"code": 401,
 							"_postman_previewlanguage": "json",
 							"header": [
 								{
 									"key": "Date",
-									"value": "Tue, 05 Mar 2024 20:26:47 GMT"
+									"value": "Fri, 05 Apr 2024 01:26:39 GMT"
 								},
 								{
 									"key": "Content-Type",
@@ -814,7 +1004,7 @@
 								},
 								{
 									"key": "CF-Ray",
-									"value": "85fcd7cd4fdda4b6-GRU"
+									"value": "86f5c0521e88017c-GRU"
 								},
 								{
 									"key": "CF-Cache-Status",
@@ -834,7 +1024,7 @@
 								},
 								{
 									"key": "rndr-id",
-									"value": "56e7e6ce-5bde-4e4b"
+									"value": "0db335cc-0d0f-4fb9"
 								},
 								{
 									"key": "x-powered-by",
@@ -859,7 +1049,7 @@
 					]
 				}
 			],
-			"description": "This route performs operations related to authenticating and requesting a JWT token that allows safe operations at the /questions route."
+			"description": "This route performs operations related to authenticating and requesting a JWT token that allows secure operations on the /questions route."
 		}
 	],
 	"event": [
