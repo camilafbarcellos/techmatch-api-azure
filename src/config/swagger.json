@@ -13,7 +13,7 @@
     "/auth": {
       "post": {
         "summary": "Authenticate admin user",
-        "description": "This endpoint is used to generate a 1h valid JWT token for admin only",
+        "description": "This endpoint is used to generate a 1h valid admin-only JWT token that allows secure operations on the /questions route",
         "tags": [
           "Auth"
         ],
