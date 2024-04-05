@@ -14,15 +14,31 @@
       "post": {
         "summary": "Authenticate admin user",
         "description": "This endpoint is used to generate a 1h valid JWT token for admin only",
-        "tags": ["Auth"],
+        "tags": [
+          "Auth"
+        ],
         "requestBody": {
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/AdminUser"
+                "type": "object",
+                "properties": {
+                  "user": {
+                    "type": "string",
+                    "description": "Admin username",
+                    "required": true,
+                    "example": "Username"
+                  },
+                  "password": {
+                    "type": "string",
+                    "description": "Admin password",
+                    "required": true,
+                    "example": "Password"
+                  }
+                }
               },
               "examples": {
-                "question": {
+                "user": {
                   "value": {
                     "user": "Username",
                     "password": "Password"
@@ -62,7 +78,9 @@
       "get": {
         "summary": "Get all questions",
         "description": "This endpoint is used to list all questions",
-        "tags": ["Questions"],
+        "tags": [
+          "Questions"
+        ],
         "responses": {
           "200": {
             "description": "OK",
@@ -82,8 +100,14 @@
       "post": {
         "summary": "Add a new question",
         "description": "This endpoint is used to register a new question and requires a valid JWT token in header",
-        "tags": ["Questions"],
-        "security": [{ "bearerAuth": [] }],
+        "tags": [
+          "Questions"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "requestBody": {
           "content": {
             "application/json": {
@@ -91,9 +115,15 @@
                 "$ref": "#/components/schemas/Question"
               },
               "examples": {
-                "question": {
+                "invalidQuestion": {
                   "value": {
                     "category": "Categoria",
+                    "question": "Enunciado"
+                  }
+                },
+                "validQuestion": {
+                  "value": {
+                    "category": "Desenvolvimento",
                     "question": "Enunciado"
                   }
                 }
@@ -129,7 +159,9 @@
       "get": {
         "summary": "Get a question",
         "description": "This endpoint is used to retrieve information about a specific question",
-        "tags": ["Questions"],
+        "tags": [
+          "Questions"
+        ],
         "parameters": [
           {
             "name": "id",
@@ -155,8 +187,14 @@
       "put": {
         "summary": "Update a question",
         "description": "This endpoint is used to update information about a specific question and requires a valid JWT token in header",
-        "tags": ["Questions"],
-        "security": [{ "bearerAuth": [] }],
+        "tags": [
+          "Questions"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "parameters": [
           {
             "name": "id",
@@ -172,9 +210,19 @@
                 "$ref": "#/components/schemas/Question"
               },
               "examples": {
-                "question": {
+                "newStatement": {
                   "value": {
                     "question": "Enunciado alterado"
+                  }
+                },
+                "invalidNewCategory": {
+                  "value": {
+                    "category": "Categoria inválida"
+                  }
+                },
+                "validNewCategory": {
+                  "value": {
+                    "category": "Desafios"
                   }
                 }
               }
@@ -207,8 +255,14 @@
       "delete": {
         "summary": "Delete a question",
         "description": "This endpoint is used to delete a specific question and requires a valid JWT token in header",
-        "tags": ["Questions"],
-        "security": [{ "bearerAuth": [] }],
+        "tags": [
+          "Questions"
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
         "parameters": [
           {
             "name": "id",
@@ -233,23 +287,6 @@
   },
   "components": {
     "schemas": {
-      "AdminUser": {
-        "type": "object",
-        "properties": {
-          "user": {
-            "type": "string",
-            "description": "Admin username",
-            "required": true,
-            "example": "Username"
-          },
-          "password": {
-            "type": "string",
-            "description": "Admin password",
-            "required": true,
-            "example": "Password"
-          }
-        }
-      },
       "Question": {
         "type": "object",
         "properties": {
@@ -288,5 +325,7 @@
       }
     }
   },
-  "apis": ["./src/routes/*.ts"]
+  "apis": [
+    "./src/routes/*.ts"
+  ]
 }
