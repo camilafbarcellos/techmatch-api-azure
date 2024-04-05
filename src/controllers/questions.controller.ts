@@ -1,5 +1,8 @@
 import { Request, Response } from 'express';
 import * as questionsService from '../services/questions.service';
+import { CreateQuestionDTO } from '../dtos/questions/createQuestion.dto';
+import { UpdateQuestionDTO } from '../dtos/questions/updateQuestion.dto';
+import { isValidCategory } from '../utils/isValidCategory';
 
 async function getAll(req: Request, res: Response) {
   try {
@@ -28,7 +31,10 @@ async function get(req: Request, res: Response) {
 
 async function create(req: Request, res: Response) {
   try {
-    const newQuestion = req.body;
+    const newQuestion: CreateQuestionDTO = req.body;
+    if (!isValidCategory(newQuestion.category)) {
+      return res.status(400).json({ message: 'Invalid category' });
+    }
     const createdQuestion = await questionsService.create(newQuestion);
     res.status(201).json(createdQuestion);
   } catch (error) {
@@ -40,8 +46,11 @@ async function create(req: Request, res: Response) {
 async function update(req: Request, res: Response) {
   try {
     const questionId = req.params.id;
-    const updatedQuestionData = req.body;
-    const updatedQuestion = await questionsService.update(questionId, updatedQuestionData);
+    const newQuestion: UpdateQuestionDTO = req.body;
+    if (newQuestion.category != null && !isValidCategory(newQuestion.category)) {
+      return res.status(400).json({ message: 'Invalid category' });
+    }
+    const updatedQuestion = await questionsService.update(questionId, newQuestion);
     if (!updatedQuestion) {
       res.status(404).json({ message: 'Question not found' });
     } else {

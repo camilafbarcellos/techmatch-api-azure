@@ -1,5 +1,7 @@
 import NodeCache from 'node-cache';
 import Questions, { IQuestion } from '../models/question.model';
+import { CreateQuestionDTO } from '../dtos/questions/createQuestion.dto';
+import { UpdateQuestionDTO } from '../dtos/questions/updateQuestion.dto';
 
 // Cache instance
 const cache = new NodeCache();
@@ -27,12 +29,12 @@ async function findOne(id: string): Promise<IQuestion | null> {
   return Questions.findById(id);
 }
 
-async function create(data: IQuestion) {
+async function create(data: CreateQuestionDTO) {
   invalidateCache();
   return new Questions(data).save();
 }
 
-async function update(id: string, data: IQuestion) {
+async function update(id: string, data: UpdateQuestionDTO) {
   invalidateCache();
   return Questions.findByIdAndUpdate(id, data, { new: true });
 }
