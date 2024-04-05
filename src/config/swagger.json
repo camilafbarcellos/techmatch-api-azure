@@ -102,6 +102,9 @@
           }
         },
         "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
           "401": {
             "description": "Unauthorized"
           },
@@ -179,6 +182,9 @@
           }
         },
         "responses": {
+          "400": {
+            "description": "Bad Request"
+          },
           "401": {
             "description": "Unauthorized"
           },
@@ -202,6 +208,7 @@
         "summary": "Delete a question",
         "description": "This endpoint is used to delete a specific question and requires a valid JWT token in header",
         "tags": ["Questions"],
+        "security": [{ "bearerAuth": [] }],
         "parameters": [
           {
             "name": "id",
@@ -211,6 +218,12 @@
           }
         ],
         "responses": {
+          "401": {
+            "description": "Unauthorized"
+          },
+          "403": {
+            "description": "Forbidden"
+          },
           "204": {
             "description": "OK"
           }
