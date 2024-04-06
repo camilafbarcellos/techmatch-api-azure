@@ -20,7 +20,8 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 
 ## :heavy_check_mark: Features
 - [Express](https://expressjs.com/) API with complete CRUD routes to [Questions](#questions-endpoints), including token authentication for adding, updating and deleting a question;
-    - Uses [JSON Web Token (JWT)](https://jwt.io/) to authenticate and authorize tokens that lasts 1h.
+    - Uses [JSON Web Token (JWT)](https://jwt.io/) to authenticate and authorize tokens that lasts 1h;
+    - Implements [NodeJS internal caching](https://www.npmjs.com/package/node-cache) module for faster data retrieval from the database.
 - Cloud [MongoDB Atlas](https://www.mongodb.com/atlas/database) database with [Questions](#questions-entity) collection;
 - Full [Swagger](https://swagger.io/) documentation following the OpenAPI Specification;
 - Complete [Postman](https://www.postman.com/) collection containing all the REST API tests and a full detailed description;
