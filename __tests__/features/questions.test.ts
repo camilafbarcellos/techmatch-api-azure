@@ -126,8 +126,8 @@ describe('PUT /questions/:id', () => {
         });
     });
 
-    describe('given question is invalid', () => {
-        it('should fail operation and return a bad request status (400)', async () => {
+    describe('given category question is invalid', () => {
+        it('should return a bad request status (400)', async () => {
             const res = await request(app)
                 .put(`/questions/${questionId}`)
                 .send(updateInvalidCategoryInput)
