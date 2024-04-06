@@ -5,6 +5,9 @@
 # dotenv
 .env
 
+# Jest tests
+coverage
+
 # Logs
 logs
 *.log
