@@ -1,25 +1,18 @@
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 
-export default function connectDB() {
+const connectDB = async () => {
     dotenv.config();
 
     const URI: string = process.env.ATLAS_URI as string;
 
     try {
-        mongoose.connect(URI);
-    } catch (err: any) {
-        console.log(err.message);
+        await mongoose.connect(URI);
+        console.log('Successfully connected to the database!');
+    } catch (err) {
+        console.error('Connection error:', err);
         process.exit(1);
     }
-
-    const dbConnection = mongoose.connection;
-
-    dbConnection.once('open', () => {
-        console.log('Successfully connected to the database!');
-    });
-
-    dbConnection.on('error', (err) => {
-        console.error('Connection error:', err);
-    });
 }
+
+export default connectDB;
