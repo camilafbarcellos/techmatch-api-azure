@@ -1,5 +1,5 @@
 import request from 'supertest';
-import app from '../../app';
+import app from '../../src/app';
 import { adminInput, invalidInput } from '../fixtures/auth.fixture';
 
 describe('POST /auth', () => {

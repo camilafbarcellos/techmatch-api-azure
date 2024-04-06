@@ -1,5 +1,5 @@
 import dotenv from 'dotenv';
-import IAdminUser from '../../utils/adminUser';
+import IAdminUser from '../../src/utils/adminUser';
 
 dotenv.config();
 

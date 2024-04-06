@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { ObjectId } from 'mongodb';
 import dotenv from 'dotenv';
-import { IQuestion } from '../../models/question.model';
+import { IQuestion } from '../../src/models/question.model';
 
 dotenv.config();
 

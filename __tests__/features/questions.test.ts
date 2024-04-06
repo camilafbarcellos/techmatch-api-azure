@@ -3,7 +3,7 @@ import { ObjectId } from 'mongodb';
 import { MongoMemoryServer } from 'mongodb-memory-server';
 import request from 'supertest';
 import dotenv from 'dotenv';
-import app from '../../app';
+import app from '../../src/app';
 import { adminInput } from '../fixtures/auth.fixture';
 import {
     invalidQuestionInput,
