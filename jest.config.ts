@@ -6,7 +6,7 @@ const jestConfig: JestConfigWithTsJest = {
   // allows you to specify the environment in which your tests will run.
   testEnvironment: 'node',
   // allows you to specify the file patterns for Jest to search for test files.
-  testMatch: ['**/**/*.test.ts'],
+  testMatch: ['./**/**/*.test.ts'],
   // determines the amount of output produced by Jest during test runs.
   verbose: true
 };
