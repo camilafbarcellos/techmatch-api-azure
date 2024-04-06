@@ -25,7 +25,7 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 - Cloud [MongoDB Atlas](https://www.mongodb.com/atlas/database) database with [Questions](#questions-entity) collection;
 - Full [Swagger](https://swagger.io/) documentation following the OpenAPI Specification;
 - Complete [Postman](https://www.postman.com/) collection containing all the REST API tests and a full detailed description;
-    - You can download the JSON file of the [Postman collection](./tests//postman/techmatch-API.postman_collection.json) and import it directly to your Postman to check the full API description and request examples;
+    - You can download the JSON file of the [Postman collection](./__tests__/postman/techmatch-API.postman_collection.json) and import it directly to your Postman to check the full API description and request examples;
     - At Postman, follow ``Import > Select file`` to correctly import the collection and use it.
 - End-to-end tests for the API endpoints built with [Jest](https://jestjs.io/) and [Supertest](https://www.npmjs.com/package/supertest).
     - Performs unit tests on a development environment using [MongoDB In-Memory Server](https://www.npmjs.com/package/mongodb-memory-server) to run an in-memory MongoDB instance and preserve the actual data.
