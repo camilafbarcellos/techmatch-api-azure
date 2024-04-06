@@ -6,10 +6,9 @@ import dotenv from 'dotenv';
 import app from '../../src/app';
 import { adminInput } from '../fixtures/auth.fixture';
 import {
-    invalidQuestionInput,
-    questionInput, questionPayload,
-    updateInvalidCategoryInput,
-    updateQuestionInput, updateQuestionPayload
+    questionInput, invalidQuestionInput,
+    updateQuestionInput, invalidUpdateCategoryInput,
+    questionPayload, updateQuestionPayload
 } from '../fixtures/questions.fixture';
 
 dotenv.config();
@@ -126,11 +125,11 @@ describe('PUT /questions/:id', () => {
         });
     });
 
-    describe('given category question is invalid', () => {
+    describe('given question category is invalid', () => {
         it('should return a bad request status (400)', async () => {
             const res = await request(app)
                 .put(`/questions/${questionId}`)
-                .send(updateInvalidCategoryInput)
+                .send(invalidUpdateCategoryInput)
                 .set('Authorization', `Bearer ${token}`);
             expect(res.statusCode).toBe(400);
         });
