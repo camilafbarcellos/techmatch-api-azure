@@ -27,6 +27,7 @@ The **front-end** of the application can be found at its [GitHub repository](htt
     - You can download the JSON file of the [Postman collection](./tests//postman/techmatch-API.postman_collection.json) and import it directly to your Postman to check the full API description and request examples;
     - At Postman, follow ``Import > Select file`` to correctly import the collection and use it.
 - End-to-end tests for the API endpoints built with [Jest](https://jestjs.io/) and [Supertest](https://www.npmjs.com/package/supertest).
+    - Unit tests using [MongoDB In-Memory Server](https://www.npmjs.com/package/mongodb-memory-server) to perform testing in a development environment that holds data in memory.
 
 ## :gear: Technologies
 ![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
