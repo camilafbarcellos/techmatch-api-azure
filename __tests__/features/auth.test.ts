@@ -1,6 +1,6 @@
 import request from 'supertest';
 import app from '../../src/app';
-import { adminInput, invalidInput } from '../fixtures/auth.fixture';
+import { adminInput, invalidAdminInput } from '../fixtures/auth.fixture';
 
 describe('POST /auth', () => {
     describe('given credentials are valid', () => {
@@ -17,7 +17,7 @@ describe('POST /auth', () => {
         it('should return an unauthorized status (401)', async () => {
             const res = await request(app)
                 .post('/auth')
-                .send(invalidInput);
+                .send(invalidAdminInput);
             expect(res.statusCode).toBe(401);
         });
     });

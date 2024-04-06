@@ -1,10 +1,10 @@
 import jwt, { Secret } from 'jsonwebtoken';
 import dotenv from 'dotenv';
-import IAdminUser from '../utils/adminUser';
+import { AdminAuthDTO } from '../dtos/auth/adminAuth.dto';
 
 dotenv.config();
 
-function authenticate(data: IAdminUser): string | null {
+function authenticate(data: AdminAuthDTO): string | null {
   const { ADMIN_USER, ADMIN_PASSWORD, SECRET_KEY } = process.env;
 
   if (data.user === ADMIN_USER && data.password === ADMIN_PASSWORD) {
