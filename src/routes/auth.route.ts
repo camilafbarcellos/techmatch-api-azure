@@ -3,6 +3,7 @@ import * as authController from '../controllers/auth.controller';
 
 const authRoute = express.Router();
 
-authRoute.post('/', authController.authenticate);
+authRoute.route('/auth')
+    .post(authController.authenticate);
 
 export default authRoute;

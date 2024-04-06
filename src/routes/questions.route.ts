@@ -4,10 +4,13 @@ import { authMiddleware } from '../middlewares/authMiddleware';
 
 const questionsRoute = express.Router();
 
-questionsRoute.get('/', questionsController.getAll);
-questionsRoute.get('/:id', questionsController.get);
-questionsRoute.post('/', authMiddleware, questionsController.create);
-questionsRoute.put('/:id', authMiddleware, questionsController.update);
-questionsRoute.delete('/:id', authMiddleware, questionsController.remove);
+questionsRoute.route('/questions')
+    .get(questionsController.getAll)
+    .post(authMiddleware, questionsController.create);
+
+questionsRoute.route('/questions/:id')
+    .get(questionsController.get)
+    .put(authMiddleware, questionsController.update)
+    .delete(authMiddleware, questionsController.remove);
 
 export default questionsRoute;

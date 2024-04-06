@@ -10,8 +10,8 @@ app.use(express.json());
 app.use(cors());
 
 // Routes
-app.use('/questions', questionsRoute);
-app.use('/auth', authRoute);
+app.use(questionsRoute);
+app.use(authRoute);
 
 // Swagger documentation
 app.use('/docs', swaggerUI.serve, swaggerUI.setup(swaggerDocs));
