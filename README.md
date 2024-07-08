@@ -7,7 +7,7 @@
   <img src="./src/assets/images/logo.png" width=115 />
 </p>
 
-**API** developed for the webapp **TechMatch**, with a database that relays on the **MongoDB Atlas** cloud. [Swagger documentation](https://techmatch-api.onrender.com/docs/) available online.
+**API** developed for the webapp **TechMatch**, with a database that relays on the **MongoDB Atlas** cloud. [Swagger documentation](https://techmatch-api.onrender.com/docs/) can be found online.
 > :rocket: Available online on [Render](https://techmatch-api.onrender.com)!
 
 The **front-end** of the application can be found at its [GitHub repository](https://github.com/camilafbarcellos/techmatch).
@@ -89,5 +89,5 @@ The **front-end** of the application can be found at its [GitHub repository](htt
 | <a href="https://github.com/camilafbarcellos">Camila Barcellos</a>
 
 <p align="right">
-    <a href="#seedling-techmatch--api">↑ Back to top</a>
+    <a href="#seedling-techmatch---api">↑ Back to top</a>
 </p>
